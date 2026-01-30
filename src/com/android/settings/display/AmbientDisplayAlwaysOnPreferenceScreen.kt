@@ -37,6 +37,8 @@ import com.android.settings.display.ambient.AmbientDisplayMainSwitchPreference
 import com.android.settings.display.ambient.AmbientDisplayStorage
 import com.android.settings.display.ambient.AmbientDisplayTopIntroPreference
 import com.android.settings.display.ambient.AmbientInactivityDetectionPreference
+import com.android.settings.display.ambient.AmbientWallpaperBlurPreference
+import com.android.settings.display.ambient.AmbientWallpaperDimmingPreference
 import com.android.settings.display.ambient.AmbientWallpaperPreference
 import com.android.settings.metrics.PreferenceActionMetricsProvider
 import com.android.settings.restriction.PreferenceRestrictionMixin
@@ -81,6 +83,8 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
 
 
     private val ambientWallpaperPreference = AmbientWallpaperPreference(context)
+    private val ambientWallpaperDimmingPreference = AmbientWallpaperDimmingPreference(context)
+    private val ambientWallpaperBlurPreference = AmbientWallpaperBlurPreference(context)
     private lateinit var keyedObserver: KeyedObserver<String>
 
     override val title: Int
@@ -150,6 +154,12 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             ambientWallpaperPreference
                 .storage(context)
                 .addObserver(AmbientWallpaperPreference.KEY, keyedObserver, HandlerExecutor.main)
+            ambientWallpaperDimmingPreference
+                .storage(context)
+                .addObserver(AmbientWallpaperDimmingPreference.KEY, keyedObserver, HandlerExecutor.main)
+            ambientWallpaperBlurPreference
+                .storage(context)
+                .addObserver(AmbientWallpaperBlurPreference.KEY, keyedObserver, HandlerExecutor.main)
         }
     }
 
@@ -158,6 +168,12 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
             ambientWallpaperPreference
                 .storage(context)
                 .removeObserver(AmbientWallpaperPreference.KEY, keyedObserver)
+            ambientWallpaperDimmingPreference
+                .storage(context)
+                .removeObserver(AmbientWallpaperDimmingPreference.KEY, keyedObserver)
+            ambientWallpaperBlurPreference
+                .storage(context)
+                .removeObserver(AmbientWallpaperBlurPreference.KEY, keyedObserver)
         }
     }
 
@@ -183,6 +199,8 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
                     R.string.doze_always_on_wallpaper_options
                 ) += {
                     +ambientWallpaperPreference
+                    +ambientWallpaperDimmingPreference
+                    +ambientWallpaperBlurPreference
                 }
             }
         }

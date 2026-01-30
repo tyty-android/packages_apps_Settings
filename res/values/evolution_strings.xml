@@ -389,4 +389,16 @@
     <string name="app_lock_credential_incorrect">Incorrect PIN, Password, or Pattern.</string>
     <string name="app_lock_biometrics_title">Allow Biometrics</string>
     <string name="app_lock_biometrics_summary">Unlock locked apps using fingerprint or face unlock when custom lock is enabled</string>
+
+    <!-- Doze Wallpaper Dimming -->
+    <string name="doze_wallpaper_dimming_title">Wallpaper dimming</string>
+    <string name="doze_wallpaper_dimming_summary">Amount of dimming applied to lock screen wallpaper on the always-on display</string>
+    <string name="doze_wallpaper_dimming_start_label">Bright</string>
+    <string name="doze_wallpaper_dimming_end_label">Dark</string>
+    <string name="doze_wallpaper_dimming_purpose" translatable="false">Configures the amount of dimming applied to lock screen wallpaper on the always-on display</string>
+
+    <!-- Doze Wallpaper Blur -->
+    <string name="doze_wallpaper_blur_title">Wallpaper blurring</string>
+    <string name="doze_wallpaper_blur_summary">Blur the lock screen wallpaper on the always-on display</string>
+    <string name="doze_wallpaper_blur_purpose" translatable="false">Whether the lock screen wallpaper should be blurred on the always-on display</string>
 </resources>
