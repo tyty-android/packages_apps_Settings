@@ -427,4 +427,14 @@
     <!-- Per-app GPU composition -->
     <string name="use_gpu_for_screen_composition_title">Use GPU for screen composition</string>
     <string name="use_gpu_for_screen_composition_summary">Select apps that should disable HW overlays while in use</string>
+
+    <!-- Doze Wallpaper Dimming -->
+    <string name="doze_wallpaper_dimming_title">Wallpaper dimming</string>
+    <string name="doze_wallpaper_dimming_summary">Amount of dimming applied to wallpaper in Always on display</string>
+    <string name="doze_wallpaper_dimming_start_label">Bright</string>
+    <string name="doze_wallpaper_dimming_end_label">Dark</string>
+
+    <!-- Doze Wallpaper Blur -->
+    <string name="doze_wallpaper_blur_title">Wallpaper blurring</string>
+    <string name="doze_wallpaper_blur_summary">Blur the wallpaper in Always on display</string>
 </resources>
